@@ -1,0 +1,43 @@
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable csstree/validator */
+@use './fonts.scss';
+@use './colors.scss';
+
+body {
+  margin: 0;
+}
+
+.calc {
+  border-collapse: collapse;
+  width: 35%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: fonts.$primary-ff;
+  font-weight: bold;
+}
+
+.firstRow > td {
+  text-align: end;
+  padding-right: 20px;
+  color: #fff;
+  background-color: colors.$inputCalc;
+}
+
+.buttons {
+  border: 1px solid #000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: colors.$primaryCalc;
+}
+
+.firstRow {
+  background-color: colors.$inputCalc;
+}
+
+.otherRow > td:last-child {
+  background-color: colors.$orange;
+}
