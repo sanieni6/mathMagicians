@@ -3,6 +3,8 @@ import '../scss/calculator.scss';
 import get from '../utils/fetchData';
 
 function Quote() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [quote, setQuote] = useState({
     quote: '',
     author: '',
@@ -11,15 +13,30 @@ function Quote() {
 
   useEffect(() => {
     const result = async () => {
-      const getQuote = await get();
-      setQuote(...getQuote);
+      try {
+        const getQuote = await get();
+        setQuote(...getQuote);
+        setLoading(false);
+      } catch (error) {
+        setError(true);
+        throw new Error(`Error fetching the data: ${error}`);
+      }
     };
     result();
   }, [setQuote]);
 
-  return (
-    <div className="quote-div">
-      <h2 className="title-quote">Quote:</h2>
+  const Print = () => {
+    if (error) {
+      return (
+        <p className="quote">Error Loading the qoute, please reload the page</p>
+      );
+    }
+    if (loading) {
+      return (
+        <p className="quote">loading...</p>
+      );
+    }
+    return (
       <p className="quote">
         {quote.quote}
         {' '}
@@ -27,6 +44,13 @@ function Quote() {
         {' '}
         {quote.author}
       </p>
+    );
+  };
+
+  return (
+    <div className="quote-div">
+      <h2 className="title-quote">Quote:</h2>
+      <Print />
     </div>
   );
 }
