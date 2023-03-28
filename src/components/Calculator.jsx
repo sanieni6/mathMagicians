@@ -66,29 +66,34 @@ function Calc() {
     setResultState({ ...calculateResult });
   };
   return (
-    <table className="calc">
-      <tbody className="calc-body">
-        <tr className="firstRow row">
-          <td colSpan={4} className="buttons result">
-            <p className="output">
-              { resultState.total }
-              {' '}
-              { resultState.operation }
-              {' '}
-              { resultState.next }
-            </p>
-          </td>
-        </tr>
+    <div className="calc-container">
+      <h2 className="calc-title">Let´s do some math!</h2>
+      <table className="calc">
+        <tbody className="calc-body">
+          <tr className="firstRow row">
+            <td colSpan={4} className="buttons result">
+              <p className="output">
+                { resultState.total }
+                {' '}
+                { resultState.operation }
+                {' '}
+                { resultState.next }
+              </p>
+            </td>
+          </tr>
 
-        <TrElement iter={4} cols={[1, 1, 1, 1]} value={['AC', '+/-', '%', '÷']} event={change} />
-        <TrElement iter={4} cols={[1, 1, 1, 1]} value={['7', '8', '9', 'x']} event={change} />
-        <TrElement iter={4} cols={[1, 1, 1, 1]} value={['4', '5', '6', '-']} event={change} />
-        <TrElement iter={4} cols={[1, 1, 1, 1]} value={['1', '2', '3', '+']} event={change} />
-        <TrElement iter={3} cols={[2, 1, 1]} value={['0', '.', '=']} event={change} />
+          <TrElement iter={4} cols={[1, 1, 1, 1]} value={['AC', '+/-', '%', '÷']} event={change} />
+          <TrElement iter={4} cols={[1, 1, 1, 1]} value={['7', '8', '9', 'x']} event={change} />
+          <TrElement iter={4} cols={[1, 1, 1, 1]} value={['4', '5', '6', '-']} event={change} />
+          <TrElement iter={4} cols={[1, 1, 1, 1]} value={['1', '2', '3', '+']} event={change} />
+          <TrElement iter={3} cols={[2, 1, 1]} value={['0', '.', '=']} event={change} />
 
-      </tbody>
+        </tbody>
 
-    </table>
+      </table>
+
+    </div>
+
   );
 }
 

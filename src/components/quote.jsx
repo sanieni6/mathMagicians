@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../scss/calculator.scss';
 import get from '../utils/fetchData';
+import '../scss/quote.scss';
 
 function Quote() {
   const [loading, setLoading] = useState(true);
@@ -28,7 +29,7 @@ function Quote() {
   const Print = () => {
     if (error) {
       return (
-        <p className="quote">Error Loading the qoute, please reload the page</p>
+        <p className="quote">Error Loading the quote, please reload the page</p>
       );
     }
     if (loading) {
