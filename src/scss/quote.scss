@@ -1,0 +1,15 @@
+.quote-div {
+  width: 100%;
+  flex: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.quote,
+.title-quote {
+  font-size: 25px;
+  padding: 10px 30px;
+}

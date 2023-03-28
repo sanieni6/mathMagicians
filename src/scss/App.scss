@@ -1,0 +1,50 @@
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable csstree/validator */
+@use './fonts.scss';
+@use './colors.scss';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: fonts.$primary-ff;
+  background-color: rgba(83, 83, 228, 0.2);
+
+  &__title {
+    font-weight: 700;
+    margin-left: 20px;
+  }
+
+  &__navBar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-right: 20px;
+  }
+}
+
+.link-header {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(83, 83, 228, 0.2);
+  font-family: fonts.$primary-ff;
+}
+
+.footer-title {
+  margin: 20px;
+}
+
+.title-link {
+  font-family: fonts.$primary-ff;
+  text-decoration: none;
+  color: #000;
+}
