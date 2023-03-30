@@ -17,7 +17,7 @@ const Home = () => (
       dui dui, eget egestas leo rutrum ut. Aenean non dignissim sapien, quis laoreet tellus.
     </p>
     <p className="home__container-ipsum">
-      Nulla commodo rhoncus ornare. Vivamus ac tristique felis, vel lacinia risus. Maecenas et
+      Lorem ipsum. Vivamus ac tristique felis, vel lacinia risus. Maecenas et
       orci vel augue faucibus semper sit amet in quam. Aliquam gravida lectus non ligula
       vehicula, sit amet efficitur odio elementum. Mauris at ante commodo, aliquam enim
       hendrerit, sollicitudin turpis. Vivamus consectetur ipsum quis libero ultricies, ut
