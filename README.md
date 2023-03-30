@@ -74,7 +74,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [[Github-pages]](https://sanieni6.github.io/mathMagicians/)
+- [[Render]](https://mathmagiciansapp.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,7 +101,7 @@ Run the project:
 
 ### Deployment
 
-This project was deployed using  [[Github-pages]](https://sanieni6.github.io/mathMagicians/)
+This project was deployed using [[Render]](https://mathmagiciansapp.onrender.com/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
