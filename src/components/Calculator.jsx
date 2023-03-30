@@ -1,6 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import '../scss/calculator.scss';
 import calculate from '../logic/calculate';
@@ -11,9 +11,7 @@ const Buttons = (props) => {
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <td colSpan={cols} onClick={(e) => change(e)} className="buttons">
-      {' '}
       {value}
-      {' '}
     </td>
   );
 };
@@ -74,9 +72,7 @@ function Calc() {
             <td colSpan={4} className="buttons result">
               <p className="output">
                 { resultState.total }
-                {' '}
                 { resultState.operation }
-                {' '}
                 { resultState.next }
               </p>
             </td>

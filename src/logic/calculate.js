@@ -14,7 +14,7 @@ function isNumber(item) {
  *   operation:String  +, -, etc.
  */
 export default function calculate(obj, buttonName) {
-  if (buttonName === ' AC ') {
+  if (buttonName === 'AC') {
     return {
       total: null,
       next: null,
@@ -46,9 +46,9 @@ export default function calculate(obj, buttonName) {
     };
   }
 
-  if (buttonName === ' . ') {
+  if (buttonName === '.') {
     if (obj.next) {
-      if (obj.next.includes(' . ')) {
+      if (obj.next.includes('.')) {
         return { ...obj };
       }
       return { ...obj, next: `${obj.next}.` };
@@ -65,7 +65,7 @@ export default function calculate(obj, buttonName) {
     return { ...obj, next: '0.' };
   }
 
-  if (buttonName === ' = ') {
+  if (buttonName === '=') {
     if (obj.next && obj.operation) {
       return {
         total: operate(obj.total, obj.next, obj.operation),
@@ -77,7 +77,7 @@ export default function calculate(obj, buttonName) {
     return {};
   }
 
-  if (buttonName === ' +/- ') {
+  if (buttonName === '+/-') {
     if (obj.next) {
       return { ...obj, next: (-1 * parseFloat(obj.next)).toString() };
     }
